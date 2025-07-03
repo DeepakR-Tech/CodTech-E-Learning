@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Courses | eLearn</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>E-Learn Platform</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="mycourses.html">My Courses</a> <!-- 👈 you add this here -->
+    </nav>
+  </header>
+
+  <section class="courses">
+    <h2>Offered Courses</h2>
+    <p>
+      🎓 1. Web Development Learn to build beautiful, responsive websites using HTML, CSS, and JavaScript. This course takes you from the basics to deploying your own projects. Ideal for beginners and aspiring front-end developers.
+    </p>
+    <p>
+      🎓 2. Python Programming Master the basics of Python, one of the most versatile and in-demand programming languages. Learn to write clean code, build real-world applications, and prepare for automation or data science.
+    </p>
+    <p>
+      🎓 3. Data Structures and Algorithms Understand how data is stored and manipulated with topics like arrays, linked lists, stacks, queues, trees, and sorting algorithms. Perfect for improving problem-solving skills and preparing for tech interviews.
+    </p>
+    <div class="course-grid">
+      <div class="course-card">
+        <h3>Web Development</h3>
+        <p>Learn HTML, CSS, JavaScript, and build real-world websites.</p>
+        <button class="enroll-btn" data-course="Web Development">Enroll</button>
+      </div>
+      <div class="course-card">
+        <h3>Python Programming</h3>
+        <p>Start coding in Python and build projects for college and beyond.</p>
+        <button class="enroll-btn" data-course="Python Programming">Enroll</button>
+      </div>
+      <div class="course-card">
+        <h3>Data Structures</h3>
+        <p>Understand stacks, queues, linked lists, and more.</p>
+        <button class="enroll-btn" data-course="Data Structures">Enroll</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 E-Learn College Platform</p>
+  </footer>
+
+  <!-- ✅ Your JavaScript is loaded last so it sees all HTML above -->
+  <script src="script.js"></script>
+
+</body>
+</html>

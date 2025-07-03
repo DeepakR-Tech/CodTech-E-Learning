@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Courses | eLearn</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>eLearn Platform</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="mycourses.html">My Courses</a>
+    </nav>
+  </header>
+
+  <section class="courses">
+    <h2>Enrolled Courses</h2>
+    <div id="enrolledCourses" class="course-grid"></div>
+  </section>
+
+  <footer>
+    <p>© 2025 E-Learn Course Platform</p>
+  </footer>
+
+  <script>
+    const enrolled = JSON.parse(localStorage.getItem("enrolledCourses")) || [];
+    const container = document.getElementById("enrolledCourses");
+
+    if (enrolled.length === 0) {
+      container.innerHTML = "<p>You have not enrolled in any courses yet.</p>";
+    } else {
+      enrolled.forEach(course => {
+        const div = document.createElement("div");
+        div.className = "course-card";
+        div.innerHTML = `<h3>${course}</h3><p>You're enrolled in this course.</p>`;
+        container.appendChild(div);
+      });
+    }
+  </script>
+</body>
+</html>
